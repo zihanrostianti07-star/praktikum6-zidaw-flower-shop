@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zidaw Pinky Bloom Shop</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+<!-- Tema pink -->
+<style>
+  .bg-pink { background-color: #f8c8dc !important; }
+  .bg-pink-soft { background-color: #fff0f5 !important; }
+  .text-pink { color: #d63f6e !important; }
+
+  /* btn-primary dibuat pink (class tetap btn btn-primary sesuai tugas) */
+  .btn-primary {
+    --bs-btn-bg: #e75480;
+    --bs-btn-border-color: #e75480;
+    --bs-btn-hover-bg: #d63f6e;
+    --bs-btn-hover-border-color: #d63f6e;
+    --bs-btn-active-bg: #c2305f;
+    --bs-btn-active-border-color: #c2305f;
+    --bs-btn-disabled-bg: #e75480;
+    --bs-btn-disabled-border-color: #e75480;
+  }
+  .card-img-top { height: 220px; object-fit: cover; }
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-pink px-3 shadow-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold text-pink" href="#home">🌸 Zidaw Pinky Bloom Shop</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#home">Beranda</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#produk">Produk</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#tentang">Tentang</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#kontak">Kontak</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<div id="home" class="bg-pink-soft text-center py-5">
+  <div class="container">
+    <span class="badge text-bg-light">Semester 3</span>
+    <h1 class="mt-2 text-pink">Zidaw Pinky Bloom Shop 🌷</h1>
+    <p class="lead">Bunga cantik untuk hari-hari manis</p>
+    <a href="#produk" class="btn btn-primary">Lihat Koleksi</a>
+  </div>
+</div>
+
+<!-- Section Produk -->
+<div id="produk" class="container py-5">
+  <h2 class="text-center m-4">Koleksi Bunga Kami</h2>
+  <div class="row g-4">
+
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card h-100 border-2 shadow-sm" style="border-color:#f8c8dc;">
+        <img src="images/mawar.jpg" class="card-img-top" alt="Mawar Pink">
+        <div class="card-body">
+          <h5 class="card-title">Mawar Pink</h5>
+          <p class="card-text">Buket mawar pink segar, cocok untuk hadiah orang tersayang.</p>
+          <p class="fw-bold text-pink mb-0">Rp75.000</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card h-100 border-2 shadow-sm" style="border-color:#f8c8dc;">
+        <img src="images/tulip.jpg" class="card-img-top" alt="Tulip Manis">
+        <div class="card-body">
+          <h5 class="card-title">Tulip Manis</h5>
+          <p class="card-text">Rangkaian tulip warna-warni yang ceria dan menenangkan.</p>
+          <p class="fw-bold text-pink mb-0">Rp90.000</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card h-100 border-2 shadow-sm" style="border-color:#f8c8dc;">
+        <img src="images/buket.jpg" class="card-img-top" alt="Buket Peony">
+        <div class="card-body">
+          <h5 class="card-title">Buket Peony</h5>
+          <p class="card-text">Buket peony lembut yang cantik untuk momen spesial.</p>
+          <p class="fw-bold text-pink mb-0">Rp120.000</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Alert -->
+  <div class="alert alert-danger mt-4 mb-0" role="alert">
+    🌷 Gratis ongkir untuk pembelian di atas Rp150.000!
+  </div>
+</div>
+
+<!-- Section Tentang -->
+<div id="tentang" class="bg-pink-soft py-5">
+  <div class="container text-center">
+    <h2>Profil Mahasiswa Semester 3</h2>
+    <p class="mb-1">Website ini dibuat oleh <strong>Zihan Rostianti</strong></p>
+    <p class="mb-0">Mahasiswa Pendidikan Sistem dan Teknologi Informasi</p>
+  </div>
+</div>
+
+<!-- Kontak Section -->
+<div id="kontak" class="bg-light py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Hubungi Kami</h2>
+    <form class="mx-auto bg-white p-4 rounded shadow-sm" style="max-width: 500px;">
+
+      <!-- Input Nama -->
+      <div class="mb-3">
+        <label for="Input-nama" class="form-label">Nama</label>
+        <input type="text" class="form-control" id="Input-nama" placeholder="Masukkan Nama Anda">
+      </div>
+
+      <!-- Input Email -->
+      <div class="mb-3">
+        <label for="Input-email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="Input-email" placeholder="nama@email.com">
+      </div>
+
+      <!-- Input Pesan -->
+      <div class="mb-3">
+        <label for="Input-pesan" class="form-label">Pesan</label>
+        <textarea class="form-control" id="Input-pesan" rows="3"></textarea>
+      </div>
+
+      <!-- Tombol Kirim Pesan (memunculkan modal) -->
+      <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalKonfirmasi">Kirim Pesan</button>
+    </form>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-pink text-center py-3">
+  <small>&copy; 2026 Zidaw Pinky Bloom Shop - Praktikum Pemrograman Internet - Pertemuan 6<br>Foto: Pinterest (untuk keperluan tugas)</small>
+</footer>
+
+<!-- Modal Konfirmasi -->
+<div class="modal fade" id="modalKonfirmasi" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalLabel">Konfirmasi</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+      </div>
+      <div class="modal-body">
+        Apakah Anda yakin ingin mengirim pesan ini?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Ya, Kirim</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
