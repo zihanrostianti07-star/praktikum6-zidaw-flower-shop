@@ -5,11 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zidaw Pinky Bloom Shop</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-<!-- Tema pink -->
+<!-- Tema pink + hero background + Pengaturan Font -->
 <style>
+     body { 
+    font-family: 'Poppins', sans-serif;}
+  
+  h1, h2, h3, h4, h5, h6, .navbar-brand {
+    font-family: 'Playfair Display', serif; }
+  
   .bg-pink { background-color: #f8c8dc !important; }
   .bg-pink-soft { background-color: #fff0f5 !important; }
   .text-pink { color: #d63f6e !important; }
@@ -25,7 +32,44 @@
     --bs-btn-disabled-bg: #e75480;
     --bs-btn-disabled-border-color: #e75480;
   }
+
+  html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+  .navbar { transition: box-shadow .3s ease; }
+  .navbar .nav-link.active { font-weight: 600; color: #d63f6e; }
+
+  .hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    isolation: isolate;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("foto bunga/alam bunga.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px);        
+    transform: scale(1.08);
+    z-index: -2;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(60,10,30,.45), rgba(214,63,110,.35));
+    z-index: -1;
+  }
+  .hero h1, .hero p { color: #fff; text-shadow: 0 2px 8px rgba(0,0,0,.45); }
+
   .card-img-top { height: 220px; object-fit: cover; }
+  .product-card { border-color: #f8c8dc; transition: transform .25s ease, box-shadow .25s ease; }
+  .product-card:hover { transform: translateY(-6px); box-shadow: 0 .75rem 1.5rem rgba(214,63,110,.2) !important; }
+
+  @media (max-width: 576px) { .hero { min-height: 380px; } }
 </style>
 </head>
 
@@ -59,15 +103,15 @@
   </div>
 </nav>
 
-<!-- Hero Section -->
-<div id="home" class="bg-pink-soft text-center py-5">
+<!-- Hero (background foto tulip blur) -->
+<section id="home" class="hero text-center py-5">
   <div class="container">
     <span class="badge text-bg-light">Semester 3</span>
-    <h1 class="mt-2 text-pink">Zidau Pinky Bloom Shop 🌷</h1>
-    <p class="lead">Bunga cantik untuk hari-hari manis</p>
-    <a href="#produk" class="btn btn-primary">Lihat Koleksi</a>
+    <h1 class="display-4 fw-bold mt-2">Zidau Pinky Bloom Shop 🌷</h1>
+    <p class="lead mb-4">Bunga cantik untuk hari-hari manis</p>
+    <a href="#produk" class="btn btn-primary btn-lg">Lihat Koleksi</a>
   </div>
-</div>
+</section>
 
 <!-- Section Produk -->
 <div id="produk" class="container py-5">
